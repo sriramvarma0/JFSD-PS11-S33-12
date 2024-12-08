@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Homestay Platform</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #1E90FF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav a {
+            margin: 0 15px;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            padding: 10px 20px;
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #FF4500;
+        }
+
+        /* Features Section */
+        .features {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .features h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #1E90FF;
+        }
+
+        .feature {
+            display: inline-block;
+            margin: 20px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .feature img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Tourist Homestay Platform</h1>
+        <nav>
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+            <a href="/homestays">View Homestays</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img th:src="@{/images/homestay.jpeg}" alt="Local Scene" />
+            <div class="hero-text">
+                <h2>Your Perfect Getaway Awaits</h2>
+                <p>Explore unique homestays and create unforgettable memories.</p>
+                <a class="cta-button" href="/homestays">Start Exploring</a>
+            </div>
+        </section>
+        <section class="features">
+            <h2>Why Choose Us?</h2>
+            <div class="feature">
+                <img th:src="@{/images/unq.jpeg}" alt="Local Scene" />
+                <h3>Unique Locations</h3>
+                <p>Stay in beautiful and unique locations around the world.</p>
+            </div>
+            <div class="feature">
+                <img th:src="@{/images/conve.jpeg}" alt="Local Scene" />
+                <h3>Comfort & Convenience</h3>
+                <p>Enjoy the comforts of home with all the amenities you need.</p>
+            </div>
+            <div class="feature">
+                <img th:src="@{/images/local.jpeg}" alt="Local Scene" />
+
+                <h3>Local Experiences</h3>
+                <p>Immerse yourself in local culture and experiences.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 JFSD:PS:11 Tourist Homestay Platform. All rights reserved JFSD:S-33:TEAM-12.</p>
+    </footer>
+</body>
+</html>

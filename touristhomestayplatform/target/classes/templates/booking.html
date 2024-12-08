@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h2>Book Your Stay</h2>
+    <form action="/bookings/confirm" method="post">
+        <input type="hidden" name="homestayId" value="${homestayId}">
+        <label>Check-in Date:</label>
+        <input type="date" name="checkInDate" required><br>
+        <label>Check-out Date:</label>
+        <input type="date" name="checkOutDate" required><br>
+        <label>Total Price:</label>
+        <input type="text" name="totalPrice" readonly><br>
+        <input type="hidden" name="userId" value="${session.userId}">
+        <button type="submit">Confirm Booking</button>
+    </form>
+</body>
+</html>
